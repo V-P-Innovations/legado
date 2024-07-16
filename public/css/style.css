@@ -58,8 +58,7 @@ ol {
 ul,
 ol {
   padding: 0;
-  webkit-padding: 0;
-  moz-padding: 0;
+ 
 }
 hr {
   height: 2px;
@@ -313,12 +312,17 @@ header .intro-text {
   background: linear-gradient(to right, #f0a62c 0%, #f0a62c 100%);
   color: #fff;
 }
-#services .service-desc {
-  margin: 10px 10px 20px;
+
+#services .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 #services h2 {
   color: #fff;
 }
+
 #services .section-title h2::after {
   position: absolute;
   content: "";
@@ -329,6 +333,7 @@ header .intro-text {
   margin-left: -30px;
   left: 50%;
 }
+
 #services .service-card {
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -336,13 +341,28 @@ header .intro-text {
   margin: 10px;
   background-color: #fff;
   transition: all 0.3s ease;
-  max-width: 500px; /* set a maximum width for the card */
-  min-height: 320px; /* set a minimum height for the card */
+  width: 280px; /* set a maximum width for the card */
+  height: 460px; /* set a minimum height for the card */
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #services .service-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#services .service-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  max-height: 200px;
+}
+
+#services .service-card:hover img {
+  transform: scale(1.05);
 }
 
 #services .service-card i {
@@ -359,6 +379,11 @@ header .intro-text {
 #services .service-card p {
   font-size: 14px;
   color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 /* add this to make the card height flexible */
@@ -369,6 +394,36 @@ header .intro-text {
 
 #services .service-card .service-desc {
   flex-grow: 1;
+  text-align: center;
+  padding: 15px
+}
+
+/* Estilo para o botão "Reserve Agora" */
+#services .btn-reserve {
+  background-color: #28a745; /* Cor verde */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 12px; /* Bordas arredondadas */
+  text-decoration: none; /* Remover sublinhado */
+  position: absolute;
+  bottom: 20px; /* Espaçamento superior */
+  right: 20px; /* Alinha o botão à direita */
+  transform: translate(-40%, -50%);
+  transition: background-color 0.3s ease;
+}
+
+#services .btn-reserve:hover {
+  background-color: #218838; /* Cor verde mais escura ao passar o mouse */
+}
+
+/* add this to make the card height flexible */
+#services .service-desc {
+  flex-grow: 1;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Portfolio Section */
@@ -413,7 +468,10 @@ header .intro-text {
 }
 .hover-bg:hover .hover-text > h4 {
   opacity: 1;
-  -webkit-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari and Chrome */
+  -moz-backface-visibility: hidden;    /* Firefox */
+  -ms-backface-visibility: hidden;     /* Internet Explorer */
+  backface-visibility: hidden; 
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }

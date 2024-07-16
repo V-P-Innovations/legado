@@ -62,23 +62,23 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-car",
+      "img": "./img/services/image1.jpg",
       "name": "Passeios Leste (HILUX)",
       "text": "Árvore da Preguiça, Praia do Préa, Lagun Beach Club, Buraco Azul Caiçara, Lagoa Azul"
       
     },
     {
-      "icon": "fa fa-compass",
+      "img": "./img/services/image2.jpg",
       "name": "Passeio Extremo Leste (HILUX)",
       "text": "Alkimister, Lagoa do Paraíso, Lagoa do Amâncio."
     },
     {
-      "icon": "fa fa-bicycle",
+      "img": "./img/services/image3.jpg",
       "name": "Passeio Oeste (Bugue)",
-      "text": "Dunas da Tatajuba, Mangue Seco, Travessia de Balsa, Cavalo Marinho, Tuboágua, Tirolesa, Lagoa Grande,Pôr do Sol nas Dunas"
+      "text": "Dunas da Tatajuba, Mangue Seco, Travessia de Balsa, Cavalo Marinho, Tuboágua, e muito mais..."
     },
     {
-      "icon": "fa fa-bed",
+      "img": "./img/services/image4.jpg",
       "name": "Passeios Opcionais (HILUX)",
       "text": "Praia e Dunas de Barrinha, Munzuá Beach."
     }
