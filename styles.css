@@ -17,12 +17,14 @@ body {
 }
 
 .navbar .logo img {
-    height: 50px;
+    height: 70px;
+    margin-left: 100px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    margin: 0;
 }
 
 .nav-links li {
@@ -47,6 +49,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin-right: 100px;
 }
 
 .reserve-btn a:hover {
@@ -56,4 +59,66 @@ body {
 #home, #translado, #passeios, #sobre, #reserve {
     padding: 100px 20px;
     text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .navbar .logo img {
+        margin-left: 10px;
+        height: 50px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        background-color: #fafafa;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .reserve-btn {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .reserve-btn.active {
+        display: flex;
+    }
+
+    .reserve-btn a {
+        width: 90%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 10px;
+    }
 }
