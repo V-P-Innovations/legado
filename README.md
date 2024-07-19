@@ -29,4 +29,4 @@
 #### todo e qualquer trabalho aqui realizado, deve ser documentado para auxilio de futuros colaboradores;
 #### é de extrema importancia que ajudemos aqueles que tenham dificuldade, pois não é porque aprendemos apanhando que ensinaremos do mesmo jeito;
 
-#### estamos aberos a novos colaboradores e ideias.
+#### estamos aberos a novos colaboradores e ideias. 
