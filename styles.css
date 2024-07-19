@@ -57,3 +57,67 @@ body {
     padding: 100px 20px;
     text-align: center;
 }
+#home section {
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem; 
+    font-weight: bold;
+}
+
+.carousel-inner img, .carousel-inner video {
+    margin-top: 1rem; /* Equivalente a mt-4 */
+    border-radius: 0.5rem; /* Equivalente a rounded-lg */
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-control-slider {
+    position: flex;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-control-slider input[type="range"] {
+    -webkit-appearance: none;
+    width: 50px;
+    height: 10px;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.carousel-control-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #66bb6a;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #66bb6a;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control-slider label {
+    font-size: 0.875rem; /* Ajuste o tamanho do texto conforme necessário */
+}
+
+#home img {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    width: 800px;
+    height: 600px;
+    aspect-ratio: 800 / 400;
+    object-fit: cover;
+}
