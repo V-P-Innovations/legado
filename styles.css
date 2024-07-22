@@ -71,8 +71,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f9fa; /* Cor de fundo para visualização */
-    
+    background-color: #f8f9fa;
 }
 
 /* home section - inicio */
@@ -80,8 +79,8 @@ section {
 #home section {
     text-align: center;
     position: relative;
-    width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 1000px; /* Limite máximo de largura */
+    width: 80%;
+    max-width: 1000px;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -93,7 +92,6 @@ section {
     font-weight: bold;
     margin-bottom: 20px;
 }
-/* home section - final */
 
 /* --------------------------------------------------------- */
 
@@ -105,11 +103,10 @@ section h2 {
 }
 
 section h2 .highlight {
-    color: #ff6600; /* Cor laranja */
+    color: #ff6600;
 }
 
-
-#translado{
+#translado {
     width: 100%;
 }
 
@@ -140,7 +137,7 @@ h2 {
 .card-container {
     display: grid;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 40px; 
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -170,7 +167,7 @@ h2 {
 .card-body h3 {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #ff6600; /* Cor laranja */
+    color: #ff6600;
 }
 
 /* Botão do cartão */
@@ -192,8 +189,8 @@ h2 {
 
 /* Estilização do carrossel */
 .carousel-inner img, .carousel-inner video {
-    margin-top: 1rem; /* Equivalente a mt-4 */
-    border-radius: 0.5rem; /* Equivalente a rounded-lg */
+    margin-top: 1rem; 
+    border-radius: 0.5rem; 
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -249,3 +246,40 @@ h2 {
     transform: translateX(20px);
 }
 
+/* Seção Sobre Nós */
+#sobre section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px; 
+    margin: 40px auto; 
+    max-width: 1000px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
