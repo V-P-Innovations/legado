@@ -1,13 +1,19 @@
+/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+/* Estilo básico do corpo e HTML */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #f8f9fa;
     font-family: Arial, sans-serif;
 }
 
+/* Estilo geral para as seções */
 section {
     text-align: center;
     position: relative;
@@ -19,6 +25,7 @@ section {
     border-radius: 8px;
 }
 
+/* Estilo da barra de navegação */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -64,7 +71,8 @@ section {
     background-color: #d48800;
 }
 
-#home, #passeios, #sobre, #reserve {
+/* Estilo das seções */
+#home, #passeios, #sobre, #reserve, #translados {
     padding: 100px 20px;
     text-align: center;
     display: flex;
@@ -72,10 +80,23 @@ section {
     align-items: center;
     height: 100vh;
     background-color: #f8f9fa;
+    width: 100%;
 }
 
-/* home section - inicio */
+#home section, #translado {
+    width: 100%;
+}
 
+h1, h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ff6600;
+}
+
+/* Estilo específico da seção #home */
 #home section {
     text-align: center;
     position: relative;
@@ -88,78 +109,36 @@ section {
 }
 
 #home h1 {
-    font-size: 2rem; 
-    font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* --------------------------------------------------------- */
-
-/* translados */
-
-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-section h2 .highlight {
-    color: #ff6600;
-}
-
-#translado {
-    width: 100%;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.highlight {
-    color: #ff6600;
-}
-
-/* cards translados */
-
-/* Estilização dos cartões */
+/* Estilo dos cartões de translados */
 .card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-/* Container dos cartões */
-.card-container {
-    display: grid;
-    gap: 20px;
-    margin-top: 40px; 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.card:hover {
+    transform: translateY(-5px);
 }
 
-/* Imagens e vídeos dentro dos cartões */
-.card img, .card video {
+.card-img-top {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
 }
 
-/* Corpo do cartão */
 .card-body {
-    padding: 20px;
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
 }
 
-/* Alinhamento dos textos dentro do cartão */
-.card-body h3, .card-body p {
+.card-body p {
     text-align: left;
     margin: 0.5rem 0;
 }
@@ -170,7 +149,6 @@ h2 {
     color: #ff6600;
 }
 
-/* Botão do cartão */
 .card-body button {
     transition: background-color 0.3s;
     align-self: center;
@@ -187,16 +165,22 @@ h2 {
     background-color: #218838;
 }
 
-/* Estilização do carrossel */
+
+/* Estilo do carrossel */
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+
 .carousel-inner img, .carousel-inner video {
-    margin-top: 1rem; 
-    border-radius: 0.5rem; 
+    margin-top: 1rem;
+    border-radius: 0.5rem;
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* Controle do carrossel */
 .carousel-control-toggle {
     position: absolute;
     top: 10px;
@@ -246,21 +230,21 @@ h2 {
     transform: translateX(20px);
 }
 
-/* Seção Sobre Nós */
+/* Estilo da seção Sobre Nós */
 #sobre section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px; 
-    margin: 40px auto; 
+    padding: 40px 20px;
+    margin: 40px auto;
     max-width: 1000px;
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 30px; 
+    gap: 30px;
 }
 
 .about-content {
@@ -270,7 +254,7 @@ h2 {
 
 .about-content p {
     margin: 0;
-    font-size: 18px; 
+    font-size: 18px;
 }
 
 .about-image {
@@ -282,4 +266,43 @@ h2 {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* Responsividade personalizada */
+@media (max-width: 767.98px) {
+    section {
+        padding: 10px;
+    }
+
+    .card-body h3 {
+        font-size: 1rem;
+    }
+
+    .card-body p {
+        font-size: 0.8rem;
+    }
+
+    .card-body button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    section {
+        padding: 15px;
+    }
+
+    .card-body h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-body p {
+        font-size: 0.85rem;
+    }
+
+    .card-body button {
+        font-size: 0.95rem;
+        padding: 9px 18px;
+    }
 }
