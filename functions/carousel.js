@@ -27,16 +27,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-
-    // código para enviar mensagem para o WhatsApp
-    document.getElementById("enviar-mensagem").addEventListener("click", () => {
-        const nome = document.getElementById("nome").value;
-        const telefone = document.getElementById("telefone").value;
-        const mensagem = document.getElementById("mensagem").value;
-
-        const mensagemCompleta = `Olá, gostaria de solicitar uma cotação para ${nome} com o telefone ${telefone}. Minha mensagem é: ${mensagem}`;
-        const phoneNumber = "+5585987445292"; // alterar para contato do cliente
-        const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(mensagemCompleta)}`;
-        window.open(url, "_blank");
-    });
 });
