@@ -1,31 +1,24 @@
-/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo básico do corpo e HTML */
-body, html {
-    height: 100%;
-    margin: 0;
-    background-color: #f8f9fa;
+body {
     font-family: Arial, sans-serif;
 }
 
-/* Estilo geral para as seções */
 section {
     text-align: center;
     position: relative;
     max-width: 1000px;
     width: 100%;
     background-color: #fff;
-    padding: 20px;
+   /* padding: 20px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-/* Estilo da barra de navegação */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -71,20 +64,16 @@ section {
     background-color: #d48800;
 }
 
-/* Estilo das seções */
-#home, #passeios, #sobre, #reserve, #translados {
+#home, #passeios, #sobre, #reserve {
     padding: 100px 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Cor de fundo para visualização */
     width: 100%;
-}
-
-#home section, #translado {
-    width: 100%;
+    
 }
 
 h1, h2 {
@@ -149,7 +138,7 @@ h1, h2 {
     color: #ff6600;
 }
 
-.card-body button {
+.card-body a {
     transition: background-color 0.3s;
     align-self: center;
     padding: 10px 20px;
@@ -161,21 +150,13 @@ h1, h2 {
     cursor: pointer;
 }
 
-.card-body button:hover {
+.card-body a:hover {
     background-color: #218838;
 }
 
-
-/* Estilo do carrossel */
-
-.carousel-item {
-    display: flex;
-    justify-content: center;
-}
-
 .carousel-inner img, .carousel-inner video {
-    margin-top: 1rem;
-    border-radius: 0.5rem;
+    margin-top: 1rem; /* Equivalente a mt-4 */
+    border-radius: 0.5rem; /* Equivalente a rounded-lg */
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -203,7 +184,7 @@ h1, h2 {
     position: relative;
     transition: background 0.3s;
     text-align: center;
-    line-height: 20px;
+    line-height: 30px;
     color: #333;
     font-size: 0.875rem;
     padding: 0 5px;
@@ -213,7 +194,7 @@ h1, h2 {
     content: '';
     display: block;
     width: 18px;
-    height: 18px;
+    height: px;
     background: #fff;
     border-radius: 50%;
     position: absolute;
@@ -227,7 +208,7 @@ h1, h2 {
 }
 
 .carousel-control-toggle input:checked + label::before {
-    transform: translateX(20px);
+    transform: translateX(30px);
 }
 
 /* Estilo da seção Sobre Nós */
@@ -268,6 +249,89 @@ h1, h2 {
     border-radius: 8px;
 }
 
+/* Seção Comentarios - O que falam sobre nós? */
+
+#comente {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#comente h2 {
+    margin-bottom: 40px;
+}
+
+.float-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.float-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/*-- Footer --*/
+
+.footer {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px; /* Adiciona margem lateral aos ícones */
+}
+
+.footer .row .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer h5,
+.footer p {
+    margin: 0;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .text-center {
+    text-align: center;
+}
+
+.footer .text-right {
+    text-align: right;
+}
+
+
+
 /* Responsividade personalizada */
 @media (max-width: 767.98px) {
     section {
@@ -282,7 +346,7 @@ h1, h2 {
         font-size: 0.8rem;
     }
 
-    .card-body button {
+    .card-body a {
         font-size: 0.9rem;
         padding: 8px 16px;
     }
@@ -301,7 +365,7 @@ h1, h2 {
         font-size: 0.85rem;
     }
 
-    .card-body button {
+    .card-body a {
         font-size: 0.95rem;
         padding: 9px 18px;
     }

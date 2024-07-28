@@ -1,30 +1,39 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var autoPlayToggle = document.getElementById('autoPlayToggle');
-    var carouselElement = document.getElementById('carouselExample');
-    var carousel = new bootstrap.Carousel(carouselElement, {
-        interval: false // Desativar autoplay inicialmente
+$(document).ready(function() {
+    var $carousel = $('#carouselExampleIndicators');
+    var autoplay = true;
+
+    // Inicializa o carrossel com autoplay
+    $carousel.carousel({
+        interval: 5000 // Tempo de intervalo do autoplay em milissegundos
     });
 
-    autoPlayToggle.addEventListener('change', function() {
-        if (this.checked) {
-            carousel.interval = 2000; // Define o intervalo de tempo
-            carousel.cycle();
+    $('#autoplaySlider').on('input', function() {
+        autoplay = $(this).is(':checked');
+        if (autoplay) {
+            $carousel.carousel({
+                interval: 5000
+            });
+            $('#sliderLabel').text('Play');
         } else {
-            carousel.pause();
+            $carousel.carousel('pause');
+            $('#sliderLabel').text('Pause');
         }
     });
 
-    $('#carouselExample').on('slide.bs.carousel', function (e) {
-        var currentSlide = $(e.relatedTarget);
-        var video = currentSlide.find('video').get(0);
+    $carousel.on('slide.bs.carousel', function (event) {
+        // Pause all videos in the carousel
+        $(this).find('video').each(function () {
+            this.pause();
+            this.currentTime = 0; // Opcional: resetar o vídeo para o início
+        });
+    });
 
-        if (video) {
-            video.play();
-        } else {
-            var videos = $(this).find('video');
-            videos.each(function() {
-                this.pause();
-            });
+    $carousel.on('slid.bs.carousel', function (event) {
+        var activeIndex = $(event.relatedTarget).index();
+        var $videoSlide = $(this).find('.carousel-item').eq(activeIndex).find('video');
+
+        if ($videoSlide.length > 0) {
+            $videoSlide.get(0).play();
         }
     });
 });
