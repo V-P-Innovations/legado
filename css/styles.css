@@ -25,11 +25,12 @@ section {
     justify-content: space-between;
     align-items: center;
     background-color: #fafafa;
-    padding: 10px 20px;
+    padding: 15px 40px;
+    box-shadow: box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo img {
-    height: 50px;
+    height: 70px;
 }
 
 .nav-links {
@@ -72,7 +73,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 105vh;
     background-color: #f8f9fa; /* Cor de fundo para visualização */
     width: 100%;
 }
