@@ -13,9 +13,10 @@ section {
     position: relative;
     max-width: 1000px;
     width: 100%;
+    height: auto;
     background-color: #fff;
     /* padding: 20px; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
@@ -65,7 +66,51 @@ section {
     background-color: #d48800;
 }
 
-#home, #passeios, #sobre, #reserve {
+#home {
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Cor de fundo para visualização */
+    width: 100%;
+}
+
+#translado {
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f8f9fa; /* Cor de fundo para visualização */
+    width: 100%;
+}
+
+#passeios {
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #f8f9fa; /* Cor de fundo para visualização */
+    width: 100%;
+}
+
+#sobre{
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    background-color: #f8f9fa; /* Cor de fundo para visualização */
+    width: 100%;
+}
+
+#reserve {
     padding: 100px 20px;
     text-align: center;
     display: flex;
@@ -213,6 +258,7 @@ h1, h2 {
 
 /* Estilo da seção Sobre Nós */
 #sobre section {
+    background: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -239,14 +285,22 @@ h1, h2 {
 }
 
 .about-image {
+    
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 350px;
+    height: 60%;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Seção Comentarios - O que falam sobre nós? */

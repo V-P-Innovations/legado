@@ -4,14 +4,14 @@ $(document).ready(function() {
 
     // Inicializa o carrossel com autoplay
     $carousel.carousel({
-        interval: 5000 // Tempo de intervalo do autoplay em milissegundos
+        interval: 7000 // Tempo de intervalo do autoplay em milissegundos
     });
 
     $('#autoplaySlider').on('input', function() {
         autoplay = $(this).is(':checked');
         if (autoplay) {
             $carousel.carousel({
-                interval: 5000
+                interval: 7000
             });
             $('#sliderLabel').text('Play');
         } else {
