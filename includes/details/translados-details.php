@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-    <?php include '../../includes/details/navbar.html'; ?>
-    <?php include '../../includes/details/translados.html'; ?>
-    <?php include '../../includes/details/footer.html'; ?>
+    <?php include '../../includes/navbar.html'; ?>
+    <?php include '../../includes/translados.html'; ?>
+    <?php include '../../includes/footer.html'; ?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
