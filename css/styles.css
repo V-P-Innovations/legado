@@ -1,23 +1,39 @@
+/* Reset de margem, padding e box-sizing para garantir consistência */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo básico para o corpo */
 body {
     font-family: Arial, sans-serif;
 }
 
-section {
+/* Classes utilitárias para centralizar conteúdo */
+.center-content {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seções reutilizáveis com estilos comuns */
+.section-common {
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+section {
+    /* Removido padding comentado para clareza */
     position: relative;
     max-width: 1000px;
-    width: 100%;
     height: auto;
     background-color: #fff;
-    /* padding: 20px; */
     box-shadow: 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin: 0 auto; /* Alinhamento centralizado */
 }
 
 .navbar {
@@ -25,7 +41,7 @@ section {
     justify-content: space-between;
     align-items: center;
     background-color: #fafafa;
-    padding: 15px 40px;
+    padding: 5px 100px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -53,6 +69,15 @@ section {
     color: #5AD548; /* Ajuste a cor conforme necessário */
 }
 
+/* Navbar fixa */
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Ajuste o valor conforme necessario para garantir que a navbar esteja sobre outros elementos*/
+}
 
 .reserve-btn a {
     background-color: #5AD548;
@@ -67,59 +92,32 @@ section {
     background-color: #d48800;
 }
 
+/* Aplicando a classe utilitária nas seções */
+#home, #translado, #passeios, #sobre, #comente {
+    @extend .section-common;
+    height: 50vh; /* Ajuste conforme necessário */
+}
+
+/* Redefinido individualmente seções que precisem de alturas diferentes */
+
 #home {
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 105vh;
-    background-color: #f8f9fa; /* Cor de fundo para visualização */
-    width: 100%;
+    height: 80vh;
 }
 
 #translado {
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    background-color: #f8f9fa; /* Cor de fundo para visualização */
-    width: 100%;
+    height: 85vh;
 }
 
 #passeios {
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    background-color: #f8f9fa; /* Cor de fundo para visualização */
-    width: 100%;
+    height: 80vh;
 }
 
-#sobre{
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 65vh;
-    background-color: #f8f9fa; /* Cor de fundo para visualização */
-    width: 100%;
+#sobre {
+    height: 55vh;
 }
 
-#reserve {
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa; /* Cor de fundo para visualização */
-    width: 100%;
+#comente {
+    height: 60vh;
 }
 
 h1, h2 {
@@ -141,10 +139,21 @@ h1, h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
 }
 
 #home h1 {
     margin-bottom: 20px;
+}
+
+/* #home quando a navbar é fixa */
+.home-fixed {
+    margin-top: 56px; /* Ajuste este valor para corresponder à altura da navbar */
+}
+
+/* Estilos opcionais para quando a navbar não é fixa */
+.home-no-fixed {
+    margin-top: 0;
 }
 
 /* Estilo dos cartões de translados */
@@ -286,7 +295,6 @@ h1, h2 {
 }
 
 .about-image {
-    
     flex: 1;
     text-align: center;
 }
@@ -299,13 +307,12 @@ h1, h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-image img:hover{
+.about-image img:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Seção Comentarios - O que falam sobre nós? */
-
 #comente {
     text-align: center;
     margin: 50px 0;
@@ -324,6 +331,7 @@ h1, h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Reutilização da classe highlight */
 .highlight {
     font-weight: bold;
     color: #ff6600;
@@ -334,13 +342,11 @@ h1, h2 {
     margin: 0 auto;
 }
 
-
 /*-- Footer --*/
-
 .footer {
     background: linear-gradient(25deg, #fff8e1, #ffeb99);
     color: #000; /* Texto preto */
-    padding: 40px 20px; /* Espaçamento maior */
+    padding: 35px 20px; /* Espaçamento maior */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px; /* Espaçamento entre colunas */
@@ -379,80 +385,53 @@ h1, h2 {
 
 .footer p {
     margin: 0;
-    margin-bottom: 10px; /* Espaçamento inferior para parágrafos */
+    margin-bottom: 10px; /* Espaçamento inferior para separação */
 }
 
-.footer a {
-    color: #000; /* Cor do link mais visível */
-    text-decoration: none;
+.footer hr {
+    margin: 10px 0;
+    border: 1px solid #ccc;
 }
 
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer .text-center {
-    text-align: center;
-    margin-bottom: 20px; /* Espaçamento inferior para separação */
-}
-
-.footer .col {
-    margin: 10px; /* Margem para espaçamento entre colunas */
-}
-/* Responsividade personalizada */
-@media (max-width: 767.98px) {
-    section {
-        padding: 10px;
+/*-- Responsividade --*/
+@media (max-width: 768px) {
+    /* Ajuste o padding em dispositivos menores */
+    .section-common {
+        padding: 80px 15px;
     }
 
-    .card-body h3 {
-        font-size: 1rem;
+    /* Alinhamento vertical para navegação em telas pequenas */
+    .navbar {
+        flex-direction: column;
     }
 
-    .card-body p {
-        font-size: 0.8rem;
+    .navbar .logo img {
+        margin-bottom: 20px;
     }
 
-    .card-body a {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-}
-.footer {
-    grid-template-columns: 1fr;
-    padding: 10px;
-}
-
-.social-icons {
-    flex-direction: column; /* Ícones em coluna em telas menores */
-}
-
-.social-icon img {
-    width: 30px;
-    height: 30px;
-    margin: 10px 0; /* Adiciona margem vertical aos ícones */
-}
-
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    section {
-        padding: 15px;
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .card-body h3 {
-        font-size: 1.1rem;
+    .about-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .card-body p {
-        font-size: 0.85rem;
+    .about-image img {
+        width: 80%;
     }
 
-    .card-body a {
-        font-size: 0.95rem;
-        padding: 9px 18px;
+    .footer {
+        padding: 20px;
+        gap: 10px;
     }
 }
 
-.footer {
-    padding: 15px;
+@media (min-width: 1200px) {
+    /* Ajuste para telas grandes */
+    .container {
+        max-width: 1140px;
+    }
 }
