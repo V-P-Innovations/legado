@@ -1,0 +1,77 @@
+/* Estilização da Navbar */
+.navbar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navbar-brand img {
+    height: 60px; 
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; 
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px; 
+}
+
+.reserve-btn {
+    margin-left: auto; 
+}
+
+.reserve-btn .btn {
+    font-size: 16px; 
+    padding: 10px 20px; 
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        flex-direction: flex;
+        align-items: flex-start;
+    }
+
+    .navbar-brand img {
+        height: 50px; 
+    }
+
+    .navbar-nav {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .reserve-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .reserve-btn .btn {
+        width: 100%;
+    }
+}

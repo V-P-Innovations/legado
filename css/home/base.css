@@ -1,0 +1,12 @@
+/* Estilo básico para o corpo */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Classes utilitárias para centralizar conteúdo */
+.center-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

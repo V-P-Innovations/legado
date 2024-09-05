@@ -84,7 +84,6 @@ body {
     color: #ff6600; 
 }
 
-/* Grid de Translados */
 #translado .row, #passeios .row {
     display: flex;
     flex-wrap: wrap;
@@ -104,14 +103,15 @@ body {
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: 100%;
+    margin: 0 auto; 
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /
 }
 
 .card-img-top {
@@ -121,7 +121,10 @@ body {
 }
 
 .card-body {
-    padding: 10px; 
+    padding: 10px 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .card-body h3 {
@@ -144,13 +147,14 @@ body {
     padding: 6px 12px; 
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; 
+    font-size: 0.875rem;
     margin-top: 8px; 
-    font-size: 0.875rem; 
 }
 
 .card-body a:hover {
     background-color: #218838;
+    transform: scale(1.05); 
 }
 
 /* Botão Customizado */
@@ -248,7 +252,7 @@ body {
     }
 
     .nav-links {
-        flex-direction: flex;
+        flex-direction: column;
         width: 100%;
         text-align: center; 
         margin-bottom: 15px; 
@@ -266,7 +270,7 @@ body {
     .reserve-btn a {
         padding: 10px 20px; 
     }
-
+    
     #translado .col-md-4, #passeios .col-md-4 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -276,6 +280,10 @@ body {
     .footer {
         grid-template-columns: 1fr;
         padding: 20px;
+    }
+
+    .footer .footer-logo {
+        display: none;
     }
 
     .social-icons {
@@ -293,6 +301,7 @@ body {
     .footer {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
 
     .card-body h3 {
         font-size: 1rem;

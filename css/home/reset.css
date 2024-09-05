@@ -1,0 +1,6 @@
+/* Reset de margem, padding e box-sizing para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
