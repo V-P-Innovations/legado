@@ -212,6 +212,7 @@ h3 {
 @media (max-width: 768px) {
     .navbar {
         padding: 10px 20px;
+        flex-direction: flex;
     }
 
     .navbar .logo img {
@@ -224,6 +225,14 @@ h3 {
         gap: 10px;
     }
 
+    .reserve-btn {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Seção Sobre Nós */
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -239,6 +248,10 @@ h3 {
 
     .footer {
         padding: 40px 15px;
+    }
+
+    .footer-logo {
+        display: none;
     }
 
     .transfers-list, .tours-list {
