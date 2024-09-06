@@ -1,4 +1,3 @@
-// Selecione todos os botões com a classe btn-success
 const buttons = document.querySelectorAll('.btn-success');
 
 // Adicione o atributo href com o valor do link em cada botão
