@@ -1,14 +1,15 @@
 /* Estilos específicos para a seção Passeios */
 #passeios {
     padding: 60px 20px;
-    background-color: #f8f9fa;
+    background-color: #fff;
+    
 }
 
 .section-common {
     padding: 40px 20px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .section-common h2 {

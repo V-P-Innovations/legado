@@ -6,11 +6,11 @@
     <title>Sobre - Valderir Jeri</title>
     <link rel="icon" href="/assets/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/sobre.css">
+    <link rel="stylesheet" href="../../css/sobre-details.css">
 </head>
 <body>
     <?php include '../../includes/navbar.html'; ?>
-    <?php include '../../includes\details\sobre-details.html'; ?>
+    <?php include '../../includes/details/sobre-details.html'; ?>
     <?php include '../../includes/footer.html'; ?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
