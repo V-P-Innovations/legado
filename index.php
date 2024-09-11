@@ -17,12 +17,12 @@
 </head>
 <body>
     <!-- Include PHP files -->
-    <?php include 'includes/navbar.html'; ?>
-    <?php include 'includes/home.html'; ?>
-    <?php include 'includes/translados.html'; ?>
-    <?php include 'includes/passeios.html'; ?>
-    <?php include 'includes/sobre.html'; ?>
-    <?php include 'includes/footer.html'; ?>
+    <?php include 'includes/navbar.html'; 
+     include 'includes/home.html'; 
+     include 'includes/translados.html'; 
+     include 'includes/passeios.html'; 
+     include 'includes/sobre.html'; 
+     include 'includes/footer.html'; ?>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

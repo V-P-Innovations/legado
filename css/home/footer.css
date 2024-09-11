@@ -17,7 +17,7 @@
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Aumentado o espaçamento entre ícones */
+    gap: 30px; 
     margin-top: 20px;
 }
 
@@ -57,21 +57,21 @@
     }
 
     .footer-logo {
-        display: none; /* Logo removida em mobile */
+        display: none; 
     }
 
     .social-icons {
         margin-top: 10px;
-        gap: 40px; /* Aumentar ainda mais o espaçamento no mobile */
+        gap: 40px; 
     }
 
     .social-icon img {
-        opacity: 0.7; /* Diminuição da opacidade em mobile */
+        opacity: 0.7; 
         transition: opacity 0.3s ease-in-out;
     }
 
     .social-icon img:hover {
-        opacity: 1; /* Restaura opacidade ao hover */
+        opacity: 1; 
     }
 
     .footer h5 {
