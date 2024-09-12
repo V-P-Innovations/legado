@@ -15,6 +15,7 @@
 .nav-links {
     list-style: none;
     display: flex;
+    margin-right: auto; 
 }
 
 .nav-links li {
@@ -32,12 +33,8 @@
     color: #5AD548;
 }
 
-.navbar.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1030;
+.reserve-btn {
+    margin-left: auto; 
 }
 
 .reserve-btn a {
@@ -53,6 +50,15 @@
 .reserve-btn a:hover {
     background-color: #d48800;
 }
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
 
 /* Seção Sobre Nós */
 #sobre {
