@@ -14,8 +14,10 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
+/* Conteúdo de texto */
 .about-content {
     flex: 1;
     text-align: left;
@@ -24,8 +26,10 @@
 .about-content p {
     margin: 0;
     font-size: 18px;
+    text-align: justify; /* Texto justificado */
 }
 
+/* Estilo da imagem */
 .about-image {
     flex: 1;
     text-align: center;
@@ -33,8 +37,9 @@
 
 .about-image img {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: 60%;
+    width: 100%; /* Ajusta a largura da imagem no mobile */
+    max-width: 350px;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -42,4 +47,24 @@
 .about-image img:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    #sobre section {
+        flex-direction: column;
+        text-align: center; /* Centraliza o conteúdo no mobile */
+    }
+
+    .about-container {
+        flex-direction: column; /* Alinha imagem acima do texto no mobile */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
+    }
+
+    .about-content {
+        text-align: justify; /* Justifica o texto no mobile */
+    }
 }
